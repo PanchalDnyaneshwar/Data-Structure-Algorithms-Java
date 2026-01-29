@@ -170,7 +170,10 @@ One-Line Interview Answer:
 - Pseudo Code → Written form of algorithm
 - Code → Actual implementation
 
+#  Searching Algorithms
 
+* Linear Search → Checking items one by one in a shopping list.
+* Binary Search → Searching a word in a dictionary.
 
 # Linear Search is a searching algorithm that checks each element one by one until the target element is found or the list ends.
 
@@ -256,4 +259,57 @@ Much faster than linear search for large data
 
 Searching a word in a dictionary
 → Open middle page, decide left or right → Binary Search
+
+# Sorting Algorithms
+
+* Bubble Sort → Repeatedly swapping adjacent books by height
+* Selection Sort → Selecting the smallest item each time
+* Insertion Sort → Sorting playing cards in hand
+* Merge Sort → Sorting exam papers by dividing into groups
+* Quick Sort → Organizing files around a pivot value
+
+# Bubble Sort
+
+# Bubble Sort is a simple sorting algorithm that repeatedly compares
+# adjacent elements and swaps them if they are in the wrong order.
+
+* Pseudocode (With Explanation)
+
+BubbleSort(arr):
+    n = length of arr
+
+    for i from 0 to n-1
+        // number of passes through the array
+
+        for j from 0 to n-i-2
+            // compare adjacent elements in unsorted part
+
+            if arr[j] > arr[j+1]
+                swap arr[j] and arr[j+1]
+                // larger element moves towards the end
+
+    // after each pass, the largest element is placed at its correct position
+
+* Time Complexity
+
+| Case        | Complexity |
+|------------|------------|
+| Best       | O(n)       |
+| Average    | O(n²)      |
+| Worst      | O(n²)      |
+
+* Space Complexity
+O(1)
+
+* Important Interview Points
+
+Simple and easy to understand
+Stable sorting algorithm
+In-place sorting (no extra memory)
+Not suitable for large datasets
+
+* Real-Life Example
+
+Arranging books by height by repeatedly swapping neighboring books
+
 
