@@ -359,3 +359,48 @@ Slower than insertion sort for small data
 * Real-Life Example
 
 Selecting the smallest number repeatedly from a list
+
+# Insertion Sort
+
+# Insertion Sort builds the sorted array one element at a time
+# by inserting each element at its correct position.
+
+* Pseudocode (With Explanation)
+
+InsertionSort(arr):
+    for i from 1 to n-1
+        key = arr[i]
+        // element to be placed at correct position
+
+        j = i - 1
+        // index of previous element
+
+        while j >= 0 and arr[j] > key
+            arr[j+1] = arr[j]
+            // shift larger element to the right
+            j--
+
+        arr[j+1] = key
+        // insert key at correct position
+
+* Time Complexity
+
+| Case        | Complexity |
+|------------|------------|
+| Best       | O(n)       |
+| Average    | O(n²)      |
+| Worst      | O(n²)      |
+
+* Space Complexity
+O(1)
+
+* Important Interview Points
+
+Stable sorting algorithm
+Efficient for small or nearly sorted data
+Uses shifting, not swapping
+In-place sorting
+
+* Real-Life Example
+
+Sorting playing cards in hand
