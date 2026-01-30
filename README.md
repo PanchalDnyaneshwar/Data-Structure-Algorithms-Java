@@ -404,3 +404,64 @@ In-place sorting
 * Real-Life Example
 
 Sorting playing cards in hand
+
+# Quick Sort 
+
+# Quick Sort is a divide and conquer sorting algorithm.
+# It selects a pivot element and partitions the array around the pivot.
+
+* Pseudocode (With Explanation)
+
+QuickSort(arr, low, high):
+    if low < high
+        pivotIndex = partition(arr, low, high)
+        // pivot placed at correct position
+
+        QuickSort(arr, low, pivotIndex - 1)
+        // recursively sort left sub-array
+
+        QuickSort(arr, pivotIndex + 1, high)
+        // recursively sort right sub-array
+
+Partition(arr, low, high):
+    pivot = arr[high]
+    // choose last element as pivot
+
+    i = low - 1
+    // boundary for elements smaller than pivot
+
+    for j from low to high - 1
+        if arr[j] < pivot
+            i++
+            swap arr[i] and arr[j]
+            // move smaller element to left
+
+    swap arr[i+1] and arr[high]
+    // place pivot at correct position
+
+    return i + 1
+    // pivot index
+
+* Time Complexity
+
+| Case        | Complexity |
+|------------|------------|
+| Best       | O(n log n) |
+| Average    | O(n log n) |
+| Worst      | O(n²)      |
+
+* Space Complexity
+O(log n)   // recursion stack
+
+* Important Interview Points
+
+Fastest sorting algorithm in practice
+Uses divide and conquer
+Not a stable sorting algorithm
+Worst case occurs when pivot is smallest or largest
+In-place sorting
+
+* Real-Life Example
+
+Sorting files using a reference value (pivot) and grouping smaller and larger files
+
