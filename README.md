@@ -465,3 +465,56 @@ In-place sorting
 
 Sorting files using a reference value (pivot) and grouping smaller and larger files
 
+# Merge Sort
+
+# Merge Sort is a divide and conquer sorting algorithm.
+# It divides the array into halves, sorts them recursively,
+# and then merges the sorted halves.
+
+* Pseudocode (With Explanation)
+
+MergeSort(arr, left, right):
+    if left < right
+        mid = (left + right) / 2
+        // divide array into two halves
+
+        MergeSort(arr, left, mid)
+        // sort left half
+
+        MergeSort(arr, mid + 1, right)
+        // sort right half
+
+        Merge(arr, left, mid, right)
+        // merge both sorted halves
+
+Merge(arr, left, mid, right):
+    create leftArr and rightArr
+    copy data into temp arrays
+
+    while elements remain in both arrays
+        compare and place smaller element into original array
+
+    copy remaining elements (if any)
+
+* Time Complexity
+
+| Case        | Complexity |
+|------------|------------|
+| Best       | O(n log n) |
+| Average    | O(n log n) |
+| Worst      | O(n log n) |
+
+* Space Complexity
+O(n)   // extra temporary arrays
+
+* Important Interview Points
+
+Stable sorting algorithm
+Uses divide and conquer
+Guaranteed O(n log n) time
+Requires extra memory
+Used in external sorting
+
+* Real-Life Example
+
+Sorting large files by splitting them into smaller chunks and merging
