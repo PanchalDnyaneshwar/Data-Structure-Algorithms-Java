@@ -518,3 +518,57 @@ Used in external sorting
 * Real-Life Example
 
 Sorting large files by splitting them into smaller chunks and merging
+
+# Dynamic size Stack 
+# Stack is a linear data structure that follows LIFO (Last In First Out).
+
+* Expand Logic
+- When stack is full (top == capacity)
+- Create new array of double size
+- Copy old elements
+- Update reference
+
+* Shrink Logic
+- When stack is only 25% used
+- Create new array of half size
+- Copy elements
+- Save memory
+
+* Pseudocode (With Explanation)
+
+Push(element):
+    if stack is full
+        expand stack
+    insert element at top
+    increment top
+
+Pop():
+    if stack is empty
+        return error
+    decrement top
+    if stack is under-utilized
+        shrink stack
+    return popped element
+
+* Time Complexity
+
+Push → O(1) amortized
+Pop  → O(1) amortized
+Peek → O(1)
+
+* Space Complexity
+O(n)
+
+* Important Interview Points
+
+Dynamic resizing avoids overflow and memory waste
+Expand → capacity * 2
+Shrink → capacity / 2
+Shrink threshold usually at 25%
+Used in real systems (ArrayList internally)
+
+* Real-Life Example
+
+Browser back button
+Undo/Redo operations
+Function call stack
